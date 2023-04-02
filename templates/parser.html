@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parser</title>
+</head>
+<body>
+    <table width="100%" height="100%" border="1">
+            
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Float</th>            
+        </tr>
+        
+        {% for i in data['items'] %}
+            <tr>
+                <td>{{ i}}</td>
+                <td>{{ data['items'][i].Name}}</td>
+                <td>{{ data['items'][i].Price }}$</td>
+                <td>{{ data['items'][i].Float}}</td>
+                
+                
+            </tr>
+        {%endfor%}
+
+    </table>
+</body>
+</html>
